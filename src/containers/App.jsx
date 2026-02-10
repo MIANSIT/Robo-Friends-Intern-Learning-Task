@@ -25,10 +25,12 @@ const filterserach=robots.filter(robot=>{
 });
 
   return (
-  <div className="  tc flex flex-wrap bg-blue min-vh-100  ">
-    <h3 className="f2 black">Robot Friends</h3>
-    <div>
+  <div className="tc flex flex-wrap bg-blue min-vh-100  ">
+    <div className="flex flex-column felx-wrap items-center mw8 center pa3 mb2">
+    <h3 className="f2 dark-blue ">Robot Friends</h3>
+    <div className="mb4">
        <SearchBox search={onsearch} />
+    </div>
     </div>
     <div className=" bg-white p-10 mx-2 align-center justify-center min-vh-100 w-screen">
      <div>
