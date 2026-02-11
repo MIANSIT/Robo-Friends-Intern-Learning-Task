@@ -1,6 +1,7 @@
 import  React from 'react'
 import Card from './Card'
 import PropTypes from 'prop-types'
+import '../App.css';
 
 function CardList({robots}) {
 
@@ -14,7 +15,7 @@ function CardList({robots}) {
     }
 
     return(
-        <div className="flex flex-wrap">
+        <div className="Cardlistrobotgrid">
             {robots.map((user)=>(
             <Card
              key={user.id}

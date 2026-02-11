@@ -49,13 +49,13 @@ const filterserach=robots.filter(robot=>{
 
   return (
   <div className="tc flex flex-wrap bg-blue min-vh-100  ">
-    <div className="flex flex-column felx-wrap items-center mw8 center pa3 mb2">
+    <div className="flex flex-column felx-wrap mw8 center pa3 mb2">
     <h3 className="f2 dark-blue ">Robot Friends</h3>
     <div className="mb4 f5">
        <SearchBox search={onsearch} />
     </div>
     </div>
-    <div className="flex flex-wrap justify-center items-center bg-white pa2 mx2 min-vh-100 w-100">
+    <div className=" justify-center  bg-white pa2 mx2 min-vh-100 w-100">
       <div className="mw9 center"> 
         <CardList robots={filterserach}/>
       </div>
