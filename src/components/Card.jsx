@@ -14,7 +14,7 @@ function  Card({id,name,username,email}){
                 <div className="bg-moon-gray ma1 ba black">
                     <img src={`https://robohash.org/${id}?size=200x200`} alt="robot"/>
                 </div>
-            <div className="bg-light-gray ma-auto ba black">
+            <div className=" bg-light-gray  ba black">
                   <p className="f4 b black">{name}<FaUser/></p>
                   <p className="f4 b black">{username}<FaIdBadge/></p>
                   <p className="f4 b black">{email}<MdEmail/></p>

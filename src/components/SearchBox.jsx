@@ -8,7 +8,7 @@ function SearchBox({search}){
 
 return(
     <div>
-        <input className="pa3 bg-moon-gray  w-100 outline-0 shadow-5 " type="search" placeholder="enter name" onChange={search}/>
+        <input className="pa3 bg-moon-gray  w-100 outline-0 shadow-5  black" type="search" placeholder="enter name" onChange={search}/>
     </div>
 );
 }
