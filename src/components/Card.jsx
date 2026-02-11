@@ -8,16 +8,16 @@ import 'tachyons';
 function  Card({id,name,username,email}){
 
     return(
-    <div className=" tc bg-light-green dib br3 bw4 pa4 ma4 grow shadow-5">
-        <IconContext.Provider value={{color:"blue", className:"global-class-name"}}>
+    <div className="  flex flex-wrap tc bg-navy dib br3 bw4 pa1 ma2 grow shadow-5">
+        <IconContext.Provider value={{color:"white", className:"global-class-name" ,size:"22px"}}>
             <div className="flex flex-column pa2 ma1">
-                <div className="bg-moon-gray ma1 ba black">
+                <div className="bg-moon-gray pa1 ba black">
                     <img src={`https://robohash.org/${id}?size=200x200`} alt="robot"/>
                 </div>
-            <div className=" bg-light-gray  ba black">
-                  <p className="f4 b black">{name}<FaUser/></p>
-                  <p className="f4 b black">{username}<FaIdBadge/></p>
-                  <p className="f4 b black">{email}<MdEmail/></p>
+            <div className="bg-light-green pa1 ba black">
+                  <div><p className=" bg-blue f4 b yellow"><FaUser/><br/>{name}</p></div>
+                  <div><p className="bg-blue  f4 b yellow"><FaIdBadge/><br/>{username}</p></div>
+                  <div><p className="bg-blue  f4 b yellow"><MdEmail/><br/>{email}</p></div>
             </div>
           
             </div>

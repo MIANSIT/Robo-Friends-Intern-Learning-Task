@@ -34,7 +34,7 @@ CardList.propTypes={
        id:PropTypes.number.isRequired,
        name:PropTypes.string.isRequired,
        email: PropTypes.string.isRequired,
-       username: PropTypes.number.isRequired
+       username: PropTypes.string.isRequired
     })).isRequired
 
 };
