@@ -32,10 +32,10 @@ const filterserach=robots.filter(robot=>{
        <SearchBox search={onsearch} />
     </div>
     </div>
-    <div className=" bg-white p-10 mx-2 align-center justify-center min-vh-100 w-screen">
-     <div>
-       <CardList robots={filterserach}/>
-     </div>
+    <div className="flex flex-wrap justify-center items-center bg-white pa2 mx2 min-vh-100 w-100">
+      <div className="mw9 center"> 
+        <CardList robots={filterserach}/>
+      </div>
    </div>
    </div>
    
