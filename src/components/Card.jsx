@@ -6,16 +6,30 @@ import PropTypes from "prop-types";
 import 'tachyons';
 import '../App.css';
 import classNames from "classnames";
+import { toast } from 'react-toastify';
+import Modal from 'react-modal';
 
 function  Card({id,name,username,email}){
     const [isfav,setFav]=useState(false);
     const cardClass=classNames('Cardrobotcard',{'fav':isfav});
 
+    const handlefav=(e)=>{
+        const newfav=!isfav;
+        setFav(newfav);
+        if(newfav)
+        { 
+            toast.success("Added to Favorite "+name);
+
+        }
+        else{
+            toast.info("Removed "+name);
+        }
+    }
+
     return(
     
         <IconContext.Provider value={{className:"global-class-name" ,size:"22px"}}>
-            <div className={cardClass}onClick={()=>
-                    setFav(!isfav)}>  
+            <div className={cardClass}onClick={handlefav}>  
                 <div className="Cardrobotimgcontainer">
                     <img className="Cradrobotimg" src={`https://robohash.org/${id}?size=200x200`} alt="robot"/>
                 </div>

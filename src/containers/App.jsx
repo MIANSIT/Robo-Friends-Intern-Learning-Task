@@ -9,8 +9,12 @@ import 'tachyons'
 import axios from 'axios';
 import classNames from 'classnames'
 import { Bars } from 'react-loader-spinner'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+import Modal from 'react-modal';
 
 
+Modal.setAppElement('#root');
 
 function App() {
 const [search, setSearch] = useState("");
@@ -52,14 +56,15 @@ function Scroll(props){
 function Loadanime(){
   return(
     <div className="loading">render(<Bars
-height="100"
-width="100"
-color="#0831b7"
-ariaLabel="bars-loading"
-wrapperStyle={{}}
-wrapperClass=""
-visible={true}
-/>)</div>
+      height="100"
+      width="100"
+      color="#0831b7"
+      ariaLabel="bars-loading"
+      wrapperStyle={{}}
+      wrapperClass=""
+      visible={true}
+      />)
+      </div>
   );
 }
 const mainViewClass = classNames("bg-white pa3 min-vh-100 w-100", {
@@ -92,6 +97,11 @@ const filterserach=robots.filter(robot=>{
         <CardList robots={filterserach}/>
       </Scroll>)}
       </div> 
+      <ToastContainer 
+      position="top-left"
+      autoClose="1000"
+      theme="colored"/>
+
     
    </div>
 
