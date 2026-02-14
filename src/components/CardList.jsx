@@ -3,7 +3,7 @@ import Card from './Card'
 import PropTypes from 'prop-types'
 import '../App.css';
 
-function CardList({robots}) {
+function CardList({robots,togglefav,fav}) {
 
     if(robots.length===0)
     {
@@ -22,7 +22,9 @@ function CardList({robots}) {
              id={user.id}
              name={user.name}
              email={user.email}
-             username={user.username}/>
+             username={user.username}
+             togglefav={togglefav} 
+             isFavorite={fav.includes(user.id)}/>
             ))}
         </div>
     );
@@ -36,7 +38,9 @@ CardList.propTypes={
        name:PropTypes.string.isRequired,
        email: PropTypes.string.isRequired,
        username: PropTypes.string.isRequired
-    })).isRequired
+    })).isRequired,
+    togglefav: PropTypes.func.isRequired,
+    fav: PropTypes.array.isRequired
 
 };
 
