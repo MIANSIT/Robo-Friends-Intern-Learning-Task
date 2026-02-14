@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {FaUser,FaRobot,FaIdBadge} from "react-icons/fa";
+import {FaUser,FaRobot,FaIdBadge,FaHeart} from "react-icons/fa";
 import {MdEmail,MdCake} from "react-icons/md";
 import { IconContext } from "react-icons/lib";
 import PropTypes from "prop-types";
@@ -13,7 +13,7 @@ function  Card({id,name,username,email}){
 
     return(
     
-        <IconContext.Provider value={{color:"white", className:"global-class-name" ,size:"22px"}}>
+        <IconContext.Provider value={{className:"global-class-name" ,size:"22px"}}>
             <div className={cardClass}onClick={()=>
                     setFav(!isfav)}>  
                 <div className="Cardrobotimgcontainer">
@@ -23,6 +23,7 @@ function  Card({id,name,username,email}){
                   <div className="Cardrobotinfobox"><p className="Cardrobotinfotext"><FaUser/><br/>{name}</p></div>
                   <div className="Cardrobotinfobox"><p className="Cardrobotinfotext"><FaIdBadge/><br/>{username}</p></div>
                   <div className="Cardrobotinfobox"><p className="Cardrobotemail"><MdEmail/><br/>{email}</p></div>
+                  <div ><p className="Cardrobotfavicon"><FaHeart/></p></div> 
             </div>
           
             </div>

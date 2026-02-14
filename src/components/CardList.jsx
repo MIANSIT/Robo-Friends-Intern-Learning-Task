@@ -9,7 +9,7 @@ function CardList({robots}) {
     {
         return( 
        <div className="tc">
-           <h3 className="f4 red">no robots found</h3> 
+           <h3 className="f4 red">No user found<br/> OR <br/>Please try again with valid names</h3> 
         </div>
         );
     }
