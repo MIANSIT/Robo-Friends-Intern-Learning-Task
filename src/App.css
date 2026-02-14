@@ -32,6 +32,11 @@ body {
   width:100%
 }
 
+.fav{
+  background-color: #f01835 !important;
+ 
+}
+
 /*scroll*/
 .scroll{
   display: block;
@@ -45,13 +50,13 @@ body {
 
 .Cardlistrobotgrid{
   display: grid;
-  grid-template-columns: 1fr; /* মোবাইল */
+  grid-template-columns: 1fr; 
   gap: 20px;
   padding: 20px;
   width: 100%;
-  max-width: 1200px; /* একটি নির্দিষ্ট সীমার মধ্যে রাখবে */
-  margin: 0 auto;    /* বাম এবং ডানের মার্জিন অটো করে মাঝখানে আনবে */
-  justify-content: center; /* গ্রিড কন্টেন্ট মাঝখানে রাখবে */
+  max-width: 1200px; 
+  margin: 0 auto;  
+  justify-content: center; 
   justify-items: center;
 }
 @media screen  and (min-width:500px){
