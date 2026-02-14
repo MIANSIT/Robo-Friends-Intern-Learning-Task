@@ -7,6 +7,9 @@ import CardList from '../components/CardList'
 import SearchBox from '../components/SearchBox'
 import 'tachyons'
 import axios from 'axios';
+import classNames from 'classnames'
+import { Bars } from 'react-loader-spinner'
+
 
 
 function App() {
@@ -26,8 +29,9 @@ useEffect(()=>{
       setLoading(true);
       const robotinfo=await axios.get("https://jsonplaceholder.typicode.com/users");
       setRobots(robotinfo.data);
-  
-     
+      setTimeout(()=>{
+        setLoading(false);
+      },3000);    
     }
     catch(error){
      setError("wrong");
@@ -43,6 +47,24 @@ function Scroll(props){
     <div className="scroll">{props.children}</div>
   );
 }
+
+
+function Loadanime(){
+  return(
+    <div className="loading">render(<Bars
+height="100"
+width="100"
+color="#0831b7"
+ariaLabel="bars-loading"
+wrapperStyle={{}}
+wrapperClass=""
+visible={true}
+/>)</div>
+  );
+}
+const mainViewClass = classNames("bg-white pa3 min-vh-100 w-100", {
+    "bg-light-gray": loading 
+  });
 
 const onsearch=(e)=>{
   setSearch(e.target.value);
@@ -63,9 +85,13 @@ const filterserach=robots.filter(robot=>{
     </div>
     
     <div className=" justify-center  bg-white pa2 mx2 min-vh-100 w-100">
-      <Scroll>
+      <div className={mainViewClass}>
+        {loading ?<Loadanime/>
+      :
+      (<Scroll>
         <CardList robots={filterserach}/>
-      </Scroll> 
+      </Scroll>)}
+      </div> 
     
    </div>
 
