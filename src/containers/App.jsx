@@ -38,6 +38,12 @@ useEffect(()=>{
   fetchrobot();
 },[]);
 
+function Scroll(props){
+  return(
+    <div className="scroll">{props.children}</div>
+  );
+}
+
 const onsearch=(e)=>{
   setSearch(e.target.value);
 }
@@ -55,11 +61,14 @@ const filterserach=robots.filter(robot=>{
        <SearchBox search={onsearch} />
     </div>
     </div>
+    
     <div className=" justify-center  bg-white pa2 mx2 min-vh-100 w-100">
-      <div className="mw9 center"> 
+      <Scroll>
         <CardList robots={filterserach}/>
-      </div>
+      </Scroll> 
+    
    </div>
+
    </div>
    
   )

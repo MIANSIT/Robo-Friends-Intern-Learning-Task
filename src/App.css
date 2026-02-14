@@ -24,6 +24,17 @@ body {
   font-family: sans-serif;
 }
 
+/*scroll*/
+.scroll{
+  display: block;
+  overflow-y:auto ;
+  height:80vh;
+  border:2px solid blueviolet;
+  padding:2px;
+  margin:2px;
+  border-radius: 10px;
+}
+
 .Cardlistrobotgrid{
   display: grid;
   grid-template-columns: 1fr; /* মোবাইল */
@@ -37,8 +48,15 @@ body {
 }
 @media screen  and (min-width:500px){
   .Cardlistrobotgrid{
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(1,1fr);
   }
+  .scroll{
+  overflow-y:visible;
+  height:auto;
+  border:none;
+ 
+}
+  
   
 }
 @media screen  and (min-width:760px){
